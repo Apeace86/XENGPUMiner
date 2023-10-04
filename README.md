@@ -157,13 +157,13 @@ pip install -U -r requirements.txt
 For a concise, unified approach to running and managing the miners, a Bash script can be used, allowing specified configurations, such as the number of GPUs, CPU cores, enabling OpenCL, and more. This simplifies the entire process, aiding users in launching and managing the mining operation effectively. Here's a quick running example. More details check `Bash Script Usage and Options`.
 
 ```sh
-$ chmod +x miner.sh
-$ ./miner.sh
+chmod +x miner.sh
+./miner.sh
 ```
 
 ### Bash Script Usage and Options:
 ``` sh
-$ ./miner.sh -g <num_of_gpus> -c <num_of_cpu_cores> [-d] [-o] [-s] [-h]
+./miner.sh -g <num_of_gpus> -c <num_of_cpu_cores> [-d] [-o] [-s] [-h]
 ```
 Options:
 ```
@@ -196,48 +196,48 @@ The detailed operations and customizations provided in this section are not mand
 
 1. **List Devices:**
    ```sh
-   $ ./xengpuminer -l -m <DEVICE_TYPE>
+   ./xengpuminer -l -m <DEVICE_TYPE>
    ```
    The `-l` flag lists all available devices. Replace `<DEVICE_TYPE>` with either `cuda` or `opencl` to list the corresponding type of devices available on your system. For instance:
    ```sh
-   $ ./xengpuminer -l -m cuda
+   ./xengpuminer -l -m cuda
    ```
    Lists all CUDA-compatible devices available.
 
 2. **Select Mode:**
    ```sh
-   $ ./xengpuminer -m <MODE>
+   ./xengpuminer -m <MODE>
    ```
    The `-m` flag allows you to choose the mode in which to run xengpuminer. Replace `<MODE>` with `cuda` for CUDA, `opencl` for OpenCL. For example:
    
    ```sh
-   $ ./xengpuminer -m opencl
+   ./xengpuminer -m opencl
    ```
    Executes xengpuminer in OpenCL mode.
 
 3. **Specify Device:**
    ```sh
-   $ ./xengpuminer -d <INDEX>
+   ./xengpuminer -d <INDEX>
    ```
    The `-d` flag lets you use the device with the specified index. Replace `<INDEX>` with the index of the device you want to use. For instance:
    ```sh
-   $ ./xengpuminer -d 0
+   ./xengpuminer -d 0
    ```
    Uses the first device on the list of available devices.
 
 4. **Define Batch Size:**
    ```sh
-   $ ./xengpuminer -b <N>
+   ./xengpuminer -b <N>
    ```
    The `-b` flag denotes the number of tasks per batch. Replace `<N>` with the desired batch size. For example:
    ```sh
-   $ ./xengpuminer -b 16
+   ./xengpuminer -b 16
    ```
    Processes 16 tasks per batch, which can be optimal depending on your device's capabilities and your specific needs.
 
 5. **Display Help:**
    ```sh
-   $ ./xengpuminer -?
+   ./xengpuminer -?
    ```
    Shows help for xengpuminer's options and exits, providing quick reference to the options available for configuration.
 
