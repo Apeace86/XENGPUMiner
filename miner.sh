@@ -6,10 +6,10 @@ if [[ "$OSTYPE" == "cygwin" ]] || [[ "$OSTYPE" == "msys" ]] || [[ "$OSTYPE" == "
     exit -1
 fi
 
-dev_fee_on=false
-opencl=false
+dev_fee_on=true
+opencl=true
 silence=false
-gpus=1
+gpus=4
 cpucores=0
 
 function display_help() {
